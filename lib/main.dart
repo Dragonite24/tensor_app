@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:tensor_app/pages/splash_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
+    return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Montserrat',
+      ),
+      home: const Scaffold(
+        body: SafeArea(
+          child: SplashScreen(),
+        ),
+      ),
     );
   }
 }
